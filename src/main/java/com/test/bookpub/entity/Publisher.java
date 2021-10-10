@@ -11,7 +11,9 @@ public class Publisher {
     @Id
     @GeneratedValue
     private Long id;
+
     private String name;
+
     @OneToMany(mappedBy = "publisher")
     private List<Book> books;
 

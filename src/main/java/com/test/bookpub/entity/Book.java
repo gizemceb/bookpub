@@ -4,8 +4,30 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-@Table(name = "book")
 public class Book {
+    @Id
+    @GeneratedValue
+    private Long id;
+    private String isbn;
+    private String title;
+    private String description;
+
+    @ManyToOne
+    private Author author;
+    @ManyToOne
+    private Publisher publisher;
+
+    @ManyToMany
+    private List<Reviewer> reviewers;
+
+    protected  Book() { }
+
+    public Book(String isbn, String title, Author author, Publisher publisher) {
+        this.author = author;
+        this.publisher = publisher;
+        this.isbn = isbn;
+        this.title = title;
+    }
     public Long getId() {
         return id;
     }
@@ -61,30 +83,5 @@ public class Book {
     public void setReviewers(List<Reviewer> reviewers) {
         this.reviewers = reviewers;
     }
-
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String isbn;
-    private String title;
-    private String description;
-
-    @ManyToOne
-    private Author author;
-    @ManyToOne
-    private Publisher publisher;
-
-    @ManyToMany
-    private List<Reviewer> reviewers;
-
-    protected  Book() { }
-
-    public Book(String isbn, String title, Author author, Publisher publisher) {
-        this.author = author;
-        this.publisher = publisher;
-        this.isbn = isbn;
-        this.title = title;
-    }
-
 
 }
