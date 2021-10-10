@@ -1,0 +1,2 @@
+# bookpub
+./gradlew clean bootRun
