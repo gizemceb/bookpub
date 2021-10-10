@@ -14,6 +14,7 @@ public class Book {
 
     @ManyToOne
     private Author author;
+
     @ManyToOne
     private Publisher publisher;
 
