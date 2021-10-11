@@ -10,6 +10,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.beans.PropertyEditorSupport;
 import java.util.List;
 
@@ -25,14 +26,21 @@ public class BookController {
         return bookRepository.findAll();
     }
 
-    @RequestMapping(value = "/{isbn}", method = RequestMethod.GET)
+    // books/{isbn}
+    @RequestMapping(value = "/{isbn:.+}", method = RequestMethod.GET)
     public Book getBook(@PathVariable Isbn isbn) {
         return bookRepository.findBookByIsbn(isbn.getIsbn());
     }
 
+    // books/reviewers
     @RequestMapping(value = "/{isbn}/reviewers", method = RequestMethod.GET)
     public List<Reviewer> getReviewers(@PathVariable("isbn") Book book) {
         return book.getReviewers();
+    }
+
+    @RequestMapping(value = "/session", method = RequestMethod.GET)
+    public String getSessionId(HttpServletRequest request) {
+        return request.getSession().getId();
     }
 
     public class IsbnEditor extends PropertyEditorSupport {
