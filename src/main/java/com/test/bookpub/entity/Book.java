@@ -5,7 +5,6 @@ import java.util.List;
 
 @Entity
 public class Book {
-    // ds
     @Id
     @GeneratedValue
     private Long id;
