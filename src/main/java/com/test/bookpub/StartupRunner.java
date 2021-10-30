@@ -11,7 +11,6 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.scheduling.annotation.Scheduled;
 
 import javax.sql.DataSource;
 
@@ -38,6 +37,7 @@ public class StartupRunner implements CommandLineRunner {
         publisher = publisherRepository.save(publisher);
         Book book = new Book("61-61-61", "Çebi ailesi üyesi olmanın ayrıcalıkları", author, publisher );
         bookRepository.save(book);
+        logger.info("Number of books:" + bookRepository.count());
     }
 
     /* @Scheduled(initialDelay = 1000, fixedRate = 10000)
