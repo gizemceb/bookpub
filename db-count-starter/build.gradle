@@ -16,7 +16,7 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
     implementation "org.springframework.boot:spring-boot:1.2.3.RELEASE"
     implementation "org.springframework.data:spring-data-commons:1.9.2.RELEASE"
-
+    implementation "org.springframework.boot:spring-boot-autoconfigure:1.2.3.RELEASE"
 
 }
 

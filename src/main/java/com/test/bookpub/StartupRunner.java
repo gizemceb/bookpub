@@ -10,10 +10,13 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
 
+@Order(Ordered.HIGHEST_PRECEDENCE - 15)
 public class StartupRunner implements CommandLineRunner {
     protected final Log logger = LogFactory.getLog(getClass());
 
