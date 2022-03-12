@@ -1,7 +1,7 @@
-package com.test.bookpub.formatters;
+package org.test.bookpub.formatters;
 
-import com.test.bookpub.entity.Book;
-import com.test.bookpub.repository.BookRepository;
+import org.test.bookpub.entity.Book;
+import org.test.bookpub.repository.BookRepository;
 import org.springframework.format.Formatter;
 
 import java.text.ParseException;

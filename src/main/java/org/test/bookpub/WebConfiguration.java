@@ -1,7 +1,7 @@
-package com.test.bookpub;
+package org.test.bookpub;
 
-import com.test.bookpub.formatters.BookFormatter;
-import com.test.bookpub.repository.BookRepository;
+import org.test.bookpub.formatters.BookFormatter;
+import org.test.bookpub.repository.BookRepository;
 import org.apache.catalina.connector.Connector;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.beans.factory.annotation.Autowired;

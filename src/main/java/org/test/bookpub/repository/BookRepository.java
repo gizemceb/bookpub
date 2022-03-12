@@ -1,6 +1,6 @@
-package com.test.bookpub.repository;
+package org.test.bookpub.repository;
 
-import com.test.bookpub.entity.Book;
+import org.test.bookpub.entity.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

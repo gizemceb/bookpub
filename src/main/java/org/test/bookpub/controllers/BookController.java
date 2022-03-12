@@ -1,9 +1,9 @@
-package com.test.bookpub.controllers;
+package org.test.bookpub.controllers;
 
-import com.test.bookpub.entity.Book;
-import com.test.bookpub.entity.Isbn;
-import com.test.bookpub.entity.Reviewer;
-import com.test.bookpub.repository.BookRepository;
+import org.test.bookpub.entity.Book;
+import org.test.bookpub.entity.Isbn;
+import org.test.bookpub.entity.Reviewer;
+import org.test.bookpub.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.StringUtils;

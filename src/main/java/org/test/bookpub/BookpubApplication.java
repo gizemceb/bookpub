@@ -1,4 +1,4 @@
-package com.test.bookpub;
+package org.test.bookpub;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

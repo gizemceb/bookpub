@@ -18,8 +18,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
 	runtimeOnly 'com.h2database:h2'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.6.4'
 	implementation project(path:':db-count-starter', configuration: 'default')
+	testRuntimeOnly "com.jayway.jsonpath:json-path"
+	testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+	testCompileOnly 'junit:junit:4.13'
+	testRuntimeOnly 'org.junit.vintage:junit-vintage-engine'
+	testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.1'
 }
 
 test {

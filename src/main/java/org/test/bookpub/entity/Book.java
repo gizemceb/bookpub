@@ -1,4 +1,6 @@
-package com.test.bookpub.entity;
+package org.test.bookpub.entity;
+
+import net.minidev.json.annotate.JsonIgnore;
 
 import javax.persistence.*;
 import java.util.List;
@@ -13,6 +15,7 @@ public class Book {
     private String description;
 
     @ManyToOne
+    @JsonIgnore
     private Author author;
 
     @ManyToOne

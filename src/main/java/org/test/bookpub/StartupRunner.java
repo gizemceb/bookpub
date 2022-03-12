@@ -1,11 +1,11 @@
-package com.test.bookpub;
+package org.test.bookpub;
 
-import com.test.bookpub.entity.Author;
-import com.test.bookpub.entity.Book;
-import com.test.bookpub.entity.Publisher;
-import com.test.bookpub.repository.AuthorRepository;
-import com.test.bookpub.repository.BookRepository;
-import com.test.bookpub.repository.PublisherRepository;
+import org.test.bookpub.entity.Author;
+import org.test.bookpub.entity.Book;
+import org.test.bookpub.entity.Publisher;
+import org.test.bookpub.repository.AuthorRepository;
+import org.test.bookpub.repository.BookRepository;
+import org.test.bookpub.repository.PublisherRepository;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +36,7 @@ public class StartupRunner implements CommandLineRunner {
     public void run(String... args) throws Exception {
         Author author = new Author("Gizem", "Çebi");
         author = authorRepository.save(author);
-        Publisher publisher = new Publisher("ÇEBI yayınları");
+        Publisher publisher = new Publisher(1L,"CEBI yayinlari");
         publisher = publisherRepository.save(publisher);
         Book book = new Book("61-61-61", "Çebi ailesi üyesi olmanın ayrıcalıkları", author, publisher );
         bookRepository.save(book);

@@ -1,4 +1,4 @@
-package com.test.bookpub.entity;
+package org.test.bookpub.entity;
 
 public class Isbn {
     private String isbn;
